@@ -17,11 +17,10 @@ public class Light implements Receiver {
         if (emitter != null && emitter.read()) {
             return color;
         }
-        return Color.BLACK;
+        return offColor;
     }
 
     public void setColor(Color color) {this.color = color; }
-    public void setColor2(Color offColor) { this.offColor = offColor;}
 
     @Override
     public void connect(int inputIndex, Emitter emitter) {
