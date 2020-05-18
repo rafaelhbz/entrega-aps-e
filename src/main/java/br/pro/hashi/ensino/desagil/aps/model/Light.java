@@ -3,10 +3,12 @@ package br.pro.hashi.ensino.desagil.aps.model;
 import java.awt.*;
 
 public class Light implements Receiver {
+    private Color offColor;
     private Color color;
     private Emitter emitter;
 
     public Light(int r, int g, int b) {
+        offColor = new Color(r, g, b);
         color = new Color(r, g, b);
         emitter = null;
     }
@@ -18,9 +20,8 @@ public class Light implements Receiver {
         return Color.BLACK;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
+    public void setColor(Color color) {this.color = color; }
+    public void setColor2(Color offColor) { this.offColor = offColor;}
 
     @Override
     public void connect(int inputIndex, Emitter emitter) {

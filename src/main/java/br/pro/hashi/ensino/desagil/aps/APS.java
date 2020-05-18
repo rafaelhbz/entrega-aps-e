@@ -18,6 +18,7 @@ public class APS {
         model.add(new NandGate());
         model.add(new OrGate());
         model.add(new AndGate());
+        model.add(new XnorGate());
         model.add(new XorGate());
 
         // Constrói a visão, que também é um controlador.
