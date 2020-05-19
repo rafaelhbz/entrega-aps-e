@@ -35,12 +35,14 @@ public class XnorGate extends Gate {
     @Override
     public void connect(int inputIndex, Emitter emitter) {
         if (inputIndex == 0) {
-            nand1.connect(0, emitter);
-            nand2.connect(0, emitter);
+            nand1.connect(1, emitter);
+            nand2.connect(1, emitter);
+            nand4.connect(0, emitter);
         }
         if (inputIndex == 1) {
             nand1.connect(0, emitter);
-            nand3.connect(1, emitter);
+            nand3.connect(0, emitter);
+            nand4.connect(1,emitter);
         }
     }
 
